@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+{
+   "TransId"         :   3,
+   "TransDate"       :   "01-JAN-2015",
+   "TransTime"       :   "10:05:00",
+   "TransType"       :   "Deposit",
+   "AccountNumber"   :   125,
+   "AccountName"     :   "Smith, Jane",
+   "TransAmount"     :   300.00,
+   "Location"        :   "website",
+   "CashierId"       :   null,
+   "ATMDetails"      :   null,
+   "WebDetails"      : {
+                     "URL"   : "www.proligence.com/acme/dep.htm"
+              },
+   "Source"   :   "Transfer",
+   "TransferDetails"   :
+            {
+               "FromBankRouting"   : "012345678",
+               "FromAccountNo"   : "1234567890",
+               "FromAccountType"   : "Checking"
+            }
+}

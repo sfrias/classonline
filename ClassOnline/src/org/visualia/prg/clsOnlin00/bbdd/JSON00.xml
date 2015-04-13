@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+{
+       "TransId"       :    1,
+       "TransDate"     :    "01-JAN-2015",
+       "TransTime"     :    "11:05:00",
+       "TransType"     :    "Deposit",
+       "AccountNumber" :    123,
+       "AccountName"   :    "Smith, John",
+       "TransAmount"   :    100.00,
+       "Location"      :    "ATM",
+       "CashierId"     :    null,
+       "ATMDetails"    : {
+           "ATMId"       : 301,
+           "ATMLocation" : "123 Some St, Danbury CT 06810"
+               },
+       "WebDetails"    : {
+           "URL"    : null
+               },
+       "Source"    :    "Check",
+       "CheckDetails"  : [
+                   {
+                       "CheckNumber"    : 101,
+                       "CheckAmount"    : 50.00,
+                       "AcmeBankFlag"    : true,
+                       "Endorsed"    : true
+                   },
+                   {
+                       "CheckNumber"    : 102,
+                       "CheckAmount"    : 50.00,
+                       "AcmeBankFlag"    : false,
+                       "Endorsed"    : true
+                   }
+               ]
+   }
+   /**
+   Line	Explanation
+1 and 33	JSON keys and values are enclosed in curly braces ({ and }).
+2	The TransId key is a unique identifier for the transaction. Key names are enclosed in double quotation marks, and the value for a key is shown after the colon. Because this TransId value is a number datatype, quotation marks are not needed.
+3	The value for TransDate is a date format, so it is enclosed in quotation marks. (Characters, time stamps, and so on are also enclosed in quotation marks.)
+10	The CashierId value is null, which means it is not known. Because this is an ATM transaction, a cashier is irrelevant. The JSON document could have omitted the CashierId key and value, but it included the key for completeness and assigned a null value.
+11–14	ATMDetails embeds a key (which includes the ATMId and ATMLocation keys and values).
+19–32	CheckDetails introduces embedded keys and values, but instead of introducing values for just one activity, such as an ATM transaction (as in the case of ATMDetails), CheckDetails introduces multiple values for multiple activities—one set of subkeys and values for each check deposited. There are two checks in this array, and arrays are presented in square brackets ([ and ]).
+23	In JSON “true” is a Boolean datatype (used without quotation marks).
+**/
