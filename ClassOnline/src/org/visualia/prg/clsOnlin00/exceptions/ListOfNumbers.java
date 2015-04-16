@@ -4,6 +4,14 @@ import java.io.*;
 import java.util.List;
 import java.util.ArrayList;
 
+
+/*	 Clase ListOfNumbers: ArrayList con 10 valores (0 al 9) indexados
+ * 	el método writeList escribe la lista en un fichero de texto OutFile.txt
+ * 	mediante E/S básica definida en java.io.
+ *	 Se usa manejo básico de excepciones.
+ */
+
+
 public class ListOfNumbers {
 
     private List<Integer> list;
