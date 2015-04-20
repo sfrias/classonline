@@ -44,4 +44,16 @@ public class GeoPoint {
 		place2 = new GeoPoint(140.0001, 90.363246235);
 		System.out.println("Distancia en metros: "+ place1.pathDist(place2));
 	}
+	public double getLongit() {
+		return longit;
+	}
+	public void setLongit(double longit) {
+		this.longit = longit;
+	}
+	public double getLatit() {
+		return latit;
+	}
+	public void setLatit(double latit) {
+		this.latit = latit;
+	}
 }
