@@ -1,6 +1,6 @@
-package org.visualia.prg.clsOnlin00.conplexe;
+package org.visualia.prg.edxjav00.conplexe;
 
-import java.lang.Math;;
+import java.lang.Math;
 
 /**
  * Representacion de numeros complejos
@@ -53,4 +53,13 @@ public class complex {
         this.arg = Math.atan2(img, real);
 
     }
+    public static void main(String[] main){
+        complex z,w;
+        z = new complex (-1.5, 3.0,true);
+        w = new complex (-1.2 ,2.4,true);
+        z.cxPlus (w);
+        System.out.println("Complejo: "+ z.strBinomic());
+        System.out.println("Complejo: "+ z.strPolar());
+    }
 }
+
