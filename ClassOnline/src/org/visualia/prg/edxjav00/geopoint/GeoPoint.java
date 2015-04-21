@@ -1,5 +1,6 @@
 /**
  * Clase Geopoint de coordenadas geodesicas
+ * Created by Santiago Frias 04/2015
  */
 package org.visualia.prg.edxjav00.geopoint;
 /**
@@ -9,7 +10,6 @@ package org.visualia.prg.edxjav00.geopoint;
 public class GeoPoint {
 	//Establece un tipo de punto geográfico 
 	private double longit, latit ;
-	final protected int K_RadiusAverageEarth = 6371000;
 	/**
 	 * Constructor de la clase
 	 */
@@ -28,21 +28,16 @@ public class GeoPoint {
 	 * @return distancia en metros entre los dos puntos
 	 */
 	public double pathDist (GeoPoint newPlace){
+		final int K_RadiusAverageEarth = 6371000;
 		double dlatit = Math.toRadians(latit-newPlace.latit);
 		double dlongit = Math.toRadians(longit-newPlace.longit);
 		double lat1 = Math.toRadians(newPlace.latit);
 		double lat2 = Math.toRadians(latit);
 		double a = Math.sin(dlatit/2)*Math.sin(dlatit/2)+
-				Math.sin(dlongit/2)*Math.sin(dlongit/2)	+
+				Math.sin(dlongit/2)*Math.sin(dlongit/2)	*
 				Math.cos(lat1)*Math.cos(lat2);
 		double c = 2*Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-		return c * K_RadiusAverageEarth;
-	}
-	public static void main(String[] args) {
-		GeoPoint place1, place2;
-		place1 = new GeoPoint(123.03964, -45.3343);
-		place2 = new GeoPoint(140.0001, 90.363246235);
-		System.out.println("Distancia en metros: "+ place1.pathDist(place2));
+		return (c * K_RadiusAverageEarth);
 	}
 	public double getLongit() {
 		return longit;
@@ -56,4 +51,13 @@ public class GeoPoint {
 	public void setLatit(double latit) {
 		this.latit = latit;
 	}
+	public static void main(String[] args) {
+		Double Distancia ;
+		GeoPoint place1, place2;
+		place1 = new GeoPoint(20.019643, 31.334354);
+		place2 = new GeoPoint(20.019187, 31.333246);
+		Distancia = place1.pathDist(place2);
+		System.out.println("Distancia en metros: "+ Distancia );
+	}
+	
 }
