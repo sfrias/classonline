@@ -1,6 +1,3 @@
-/**
- * 
- */
 package org.visualia.prg.edxjav00.conplexe;
 /**
  * @author sfrias
@@ -43,12 +40,4 @@ public class ComplExtd extends Complex {
 	public boolean esReal(){
 		return esReal;
 	}
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
 }
